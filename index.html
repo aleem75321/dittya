@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>You're Invited to My Birthday Celebration!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #00b5fd;
-      background-size: cover; /* Adjust size as needed */
-      background-repeat: no-repeat; /* Prevents image tiling */
-      font-family: Arial, sans-serif;
+      background-size: cover;
+      background-repeat: no-repeat;
       margin: 0;
       padding: 20px;
     }
@@ -18,17 +18,28 @@
     h1 {
       text-align: center;
       font-size: 2em;
-      margin-bottom: 20px;
+      margin-top: 0; /* Remove top margin from heading */
     }
 
     video {
       display: block;
-      margin: 0 auto;
-      width: 50%;
+      width: 100%; /* Adjust width as needed */
     }
 
-    .location-details {
-      margin-top: 20px;
+    .content-container {
+      display: flex;
+    }
+
+    .location-details,
+    .video-section {
+      flex: 1; /* Both sections take up equal space */
+      margin: 20px;
+    }
+
+    .location-icon {
+      margin-right: 10px;
+      font-size: 20px;
+      color: #00b5fd;
     }
 
     .location-title {
@@ -47,16 +58,21 @@
   </style>
 </head>
 <body>
-  <h1>You're Invited to My Birthday Celebration!</h1>
-  <video width="640" height="480" controls>
-    <source src="invitation.mp4" type="video/mp4">
-  </video>
+  <div class="content-container">
+    <div class="location-details">
+      <div>
+        <h3 class="location-title"><i class="fas fa-map-marker-alt"></i> Party Location:</h3>
+        <p>Utsah Restaurant, Utsah Chouraha, Sector F, Slice 3, Aranya Nagar, Scheme 78, Vijay Nagar, Indore, Madhya Pradesh 452010</p>
+        <p class="map-link">Get directions: <a href="https://www.google.com/maps/place/Utsah+Restaurant/@22.7667783,75.8994324,15z/data=!4m6!3m5!1s0x396303ca3141856d:0x2431613bdd7c48a9!8m2!3d22.7667783!4d75.8994324!16s%2Fg%2F11h127_w33?entry=ttu">Utsah Restaurant</a></p>
+      </div>
+    </div>
 
-  <div class="location-details">
-    <h3 class="location-title">Party Location:</h3>
-    <p>**Address:** Utsah Chouraha, Sector F, Slice 3, Aranya Nagar, Scheme 78, Vijay Nagar, Indore, Madhya Pradesh 452010</p>
-    <p class="map-link">OR See map for directions: <a href="https://www.google.com/maps/place/Utsah+Restaurant/@22.7667783,75.8994324,15z/data=!4m6!3m5!1s0x396303ca3141856d:0x2431613bdd7c48a9!8m2!3d22.7667783!4d75.8994324!16s%2Fg%2F11h127_w33?entry=ttu">Utsah Restaurant</a></p>
+    <div class="video-section">
+      <h1>You're Invited to My Birthday Celebration!</h1>
+      <video width="640" height="480" controls>
+        <source src="invitation.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
-
 </body>
 </html>
