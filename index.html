@@ -15,15 +15,14 @@
       margin: 0;
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.3); /* Add this line for opacity */
-  }
-  
+    }
 
-  h1 {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 0;
-    color: rgb(255, 255, 255); /* Change to white */
-}
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-top: 0;
+      color: rgb(255, 255, 255); /* Change to white */
+    }
 
     h2 {
       text-align: center;
@@ -31,59 +30,40 @@
       margin-top: 0;
       color: rgb(206, 12, 77);
     }
+
     video {
-      width: 100%; /* Set width to 100% */
-      height: calc(100vw / 1.7777777778); /* Set height for 16:9 aspect ratio */
-  }
+      width: 100%; /* Set width to 100% for responsiveness */
+    }
 
     .content-container {
       display: flex;
+      flex-direction: column; /* Stack elements vertically on mobile */
     }
 
     .location-details,
     .video-section {
-      flex: 1;
-      margin: 50px;
+      flex: 1; /* Allow elements to grow within container */
+      margin: 10px; /* Adjust margins for better spacing on mobile */
     }
-
-    @media only screen and (max-width: 768px) {
-      /* Styles for screens less than 768px wide */
-      .content-container {
-        flex-direction: column; /* Stack elements vertically on mobile */
-      }
-      
-      .location-details,
-      .video-section {
-        flex: auto; /* Remove fixed width for flexible layout */
-        margin: 10px; /* Adjust margins for better spacing on mobile */
-      }
-      
-      h1 {
-        font-size: 1.5em; /* Adjust font size for mobile readability */
-      }
-    }
-
-
   </style>
 </head>
 
 <body>
-  <div class="content-container">    
-    <div class="content-container">
-      <div class="video-section">
-        <h1>You're Invited to My Birthday Celebration!</h1>
-        <video id="myVideo" width="100%" controls preload="auto">
-          <source src="invitation.mp4" type="video/mp4">
+  <div class="content-container">
+    <div class="video-section">
+      <h1>You're Invited to My Birthday Celebration!</h1>
+      <video id="myVideo" width="100%" controls preload="auto">
+        <source src="invitation.mp4" type="video/mp4">
       </video>
+    </div>
+    <div class="location-details">
+      <div>
+        <h3 class="location-title"><i class="fas fa-map-marker-alt"></i> Party Location:</h3>
+        <h2><p>Utsah Restaurant, Utsah Chouraha, Sector F, Slice 3, Aranya Nagar, Scheme 78, Vijay Nagar, Indore, Madhya Pradesh 452010</p></h2>
+        <p class="map-link">Get directions: <a href="https://www.google.com/maps/place/Utsah+Restaurant/@22.7667783,75.8994324,15z/data=!4m6!3m5!1s0x396303ca3141856d:0x2431613bdd7c48a9!8m2!3d22.7667783!4d75.8994324!16s%2Fg%2F11h127_w33?entry=ttu">Utsah Restaurant</a></p>
       </div>
     </div>
   </div>
-  <div class="location-details">
-    <div>
-      <h3 class="location-title"><i class="fas fa-map-marker-alt"></i> Party Location:</h3>
-      <h2><p>Utsah Restaurant, Utsah Chouraha, Sector F, Slice 3, Aranya Nagar, Scheme 78, Vijay Nagar, Indore, Madhya Pradesh 452010</p></h2>
-      <p class="map-link">Get directions: <a href="https://www.google.com/maps/place/Utsah+Restaurant/@22.7667783,75.8994324,15z/data=!4m6!3m5!1s0x396303ca3141856d:0x2431613bdd7c48a9!8m2!3d22.7667783!4d75.8994324!16s%2Fg%2F11h127_w33?entry=ttu">Utsah Restaurant</a></p>
-    </div>
-  </div>
 </body>
+
 </html>
