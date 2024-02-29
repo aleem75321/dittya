@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding-top: 10px;
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 75% 75% 70% 70%;
 }
 
 .balloon {
@@ -117,7 +116,7 @@ body {
   position: absolute;
   bottom: -11px;
   left: 52%;
-  content: "▲";
+  content: "â–²";
   font-size: 1em;
 }
 
@@ -134,9 +133,10 @@ h1 {
   position: relative;
   text-align: center;
   margin-top: 10;
-  color: #f0594a;   
+  color: #f0594a;
+  /* Light red */
   font-family: "Comic Sans MS", cursive;
-  font-size: 1.5em;
+  font-size: 2.5em;
   text-shadow: 1px 1px 2px rgba(0, 1, 0, 5);   
   z-index: 1;
 }
@@ -364,29 +364,3 @@ video {
     transform: translate(-15px, 10px) rotate(10deg);
   }
 }
-
-
-
-@media only screen and (min-width: 768px) {
-    /* Styles for screens wider than 768px (e.g., desktops) */
-    .balloon>div:nth-child(2) {
-      left: 20%;
-    }
-    
-    .balloon>div:nth-child(3) {
-      left: 35%;
-    }
-    .balloon>div:nth-child(4) {
-      left: 50%;
-    }
-    .balloon>div:nth-child(5) {
-      left: 65%;
-    }
-    
-    .balloon>div:nth-child(6) {
-      left: 80%;
-    }
-    h1 {
-        font-size: 2.5em;
-    }
-  }
