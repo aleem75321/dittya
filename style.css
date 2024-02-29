@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding-top: 10px;
   background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 75% 75% 70% 70%;
 }
 
 .balloon {
@@ -363,6 +364,8 @@ video {
     transform: translate(-15px, 10px) rotate(10deg);
   }
 }
+
+
 
 @media only screen and (min-width: 768px) {
     /* Styles for screens wider than 768px (e.g., desktops) */
